@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#160b16">
+<meta name="format-detection" content="telephone=no,date=no,address=no,email=no,url=no">
+<meta name="apple-mobile-web-app-title" content="My everything ❤️">
+<title>My everything ❤️</title>
+<style>
+:root{--bg:#100914;--cream:#fff1e7;--rose:#f4a4bf;--muted:#d8cbd2;--line:rgba(255,255,255,.14);--card:rgba(255,255,255,.07)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;color:#faeef3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:radial-gradient(circle at 18% 4%,#511b3c 0,#241020 34%,#0d0811 82%);overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.14;background-image:radial-gradient(circle,rgba(255,255,255,.4) 1px,transparent 1.2px);background-size:68px 68px}
+.shell{width:min(100% - 30px,880px);margin:auto;position:relative;z-index:1}.hero{min-height:100svh;display:grid;align-items:center;padding:88px 0 70px}
+.eyebrow,.kicker,.chapter{color:var(--rose);font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.2em}.date:before{content:"30 08 2024"}.date{color:var(--rose);pointer-events:none;-webkit-touch-callout:none}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;color:var(--cream);font-weight:500;margin:0}h1{font-size:clamp(55px,14vw,100px);line-height:.94;letter-spacing:-.04em}h1 em{color:#ffd0dc;font-style:italic}
+.for{margin-top:18px;color:var(--rose);font-family:Georgia,serif;font-size:25px;font-style:italic}.copy{color:var(--muted);font-size:clamp(17px,4.5vw,21px);line-height:1.75;margin:28px 0 0;max-width:700px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:30px}.btn{border:0;min-height:58px;border-radius:999px;padding:0 14px;font-size:15px;font-weight:800;display:flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer}.primary{background:linear-gradient(120deg,#ffe8dc,#ffc6d7);color:#2b1721}.secondary{background:rgba(255,255,255,.08);border:1px solid var(--line);color:#fff}.secondary.playing{background:rgba(244,164,191,.16);border-color:rgba(244,164,191,.55)}
+.songline{display:flex;align-items:center;gap:10px;margin-top:13px;color:var(--muted);font-size:13px;min-height:22px}.pulse{width:8px;height:8px;border-radius:50%;background:var(--rose);box-shadow:0 0 0 0 rgba(244,164,191,.4)}.playing .pulse{animation:pulse 1.6s infinite}@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(244,164,191,0)}100%{box-shadow:0 0 0 0 rgba(244,164,191,0)}}
+section{padding:72px 0}.heading h2{font-size:clamp(44px,11vw,72px);line-height:1.02;margin-top:12px}.heading p{color:var(--muted);font-size:17px;line-height:1.7}.glass{background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.045));border:1px solid var(--line);box-shadow:0 24px 70px rgba(0,0,0,.28)}
+.counter{border-radius:34px;padding:26px;margin-top:28px}.label{color:var(--muted);font-size:16px;margin-bottom:18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.box{min-height:132px;border-radius:25px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.045);display:flex;flex-direction:column;justify-content:center;align-items:center}.num{font-family:Georgia,"Times New Roman",serif;font-size:54px;color:var(--cream);font-variant-numeric:tabular-nums}.unit{font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:var(--muted);margin-top:7px}.quote{margin-top:24px;padding:35px 24px;border-radius:30px;text-align:center;font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:clamp(28px,7vw,42px);line-height:1.18}
+.memories{display:grid;gap:20px;margin-top:30px}.memory{border-radius:30px;overflow:hidden}.media{display:block;background:#170d18;position:relative;overflow:hidden;border:0;padding:0;width:100%;cursor:pointer}.media.landscape{aspect-ratio:16/10}.media.portrait{aspect-ratio:4/5}.media img{width:100%;height:100%;object-fit:cover;display:block;image-rendering:auto}.play{position:absolute;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.08)}.play span{width:68px;height:68px;border-radius:50%;display:grid;place-items:center;background:rgba(18,9,18,.7);border:1px solid rgba(255,255,255,.25);font-size:30px;padding-left:4px;backdrop-filter:blur(9px)}.caption{padding:22px}.caption h3{font-size:32px;margin-top:8px}.caption p{color:var(--muted);line-height:1.65;margin-bottom:0}
+.letter{border-radius:34px;padding:32px}.letter h2{font-size:clamp(44px,11vw,70px)}.letter p{font-size:17px;line-height:1.9;color:#f3e6ec}.signature{font-family:Georgia,serif;font-size:28px!important;color:#ffd0dc!important;font-style:italic}
+.gift{text-align:center;border-radius:34px;padding:45px 24px}.gift .icon{font-size:68px}.gift h2{font-size:clamp(42px,10vw,64px);margin-top:14px}.gift p{color:var(--muted);font-size:17px;line-height:1.7}.gift button{margin:auto}.ending{min-height:65svh;display:grid;place-items:center;text-align:center;padding-bottom:100px}.ending h2{font-size:clamp(52px,14vw,92px);line-height:.98}
+.modal{position:fixed;inset:0;z-index:50;background:rgba(5,3,7,.97);display:none;align-items:center;justify-content:center;padding:74px 14px 24px}.modal.show{display:flex}.modal img,.modal video{max-width:100%;max-height:calc(100svh - 110px);border-radius:18px;background:#000;object-fit:contain}.modal video{width:min(100%,900px)}.modalcard{width:min(100%,600px);padding:34px 24px;border-radius:30px;text-align:center;background:#211521;border:1px solid var(--line)}.modalcard h3{font-size:42px}.modalcard p{color:var(--muted);line-height:1.8;font-size:17px}.close{position:fixed;top:max(18px,env(safe-area-inset-top));left:18px;width:50px;height:50px;border:1px solid var(--line);border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:28px;z-index:60}
+@media(min-width:720px){.grid{grid-template-columns:repeat(4,1fr)}.actions{display:flex}.memories{grid-template-columns:1fr 1fr}.memory:last-child{grid-column:1/-1}.memory:last-child .media{aspect-ratio:16/8}}
+</style>
+</head>
+<body>
+<audio id="ourSong" src="song.m4a" preload="metadata"></audio>
+<main>
+<header class="hero shell"><div>
+  <div class="eyebrow"><span class="date" aria-label="August 30 2024"></span>&nbsp;&nbsp;♡&nbsp;&nbsp;our beginning</div>
+  <h1>On August 30th<br><em>everything changed</em></h1>
+  <div class="for">For Rozana ♡</div>
+  <p class="copy">Rozana two years countless calls a thousand little moments and somehow you still feel like my favorite hello</p>
+  <div class="actions"><a class="btn primary" href="#time">Start our story ♡</a><button class="btn secondary" id="songButton" type="button">Play our song ♫</button></div>
+  <div class="songline" id="songLine"><span class="pulse"></span><span id="songText">Adam Taa</span></div>
+</div></header>
+
+<section id="time"><div class="shell">
+  <div class="heading"><div class="kicker">Our time</div><h2>Distance counted the miles Love counted everything else</h2><p>Since August 30 2024 every second has added another tiny piece to us</p></div>
+  <div class="counter glass"><div class="label">Time since we became us</div><div class="grid">
+    <div class="box"><span class="num" id="days">0</span><span class="unit">days</span></div>
+    <div class="box"><span class="num" id="hours">00</span><span class="unit">hours</span></div>
+    <div class="box"><span class="num" id="minutes">00</span><span class="unit">minutes</span></div>
+    <div class="box"><span class="num" id="seconds">00</span><span class="unit">seconds</span></div>
+  </div></div>
+  <div class="quote glass">Rozana no matter how far away you are you still feel like home</div>
+</div></section>
+
+<section id="memories"><div class="shell">
+  <div class="heading"><div class="kicker">Five little chapters</div><h2>Our story one memory at a time</h2><p>Three photos two videos and five little pieces of us I never want to forget</p></div>
+  <div class="memories">
+    <article class="memory glass"><button class="media landscape" data-kind="image" data-src="p1.jpg"><img src="p1.jpg" alt="Our first memory" loading="lazy" decoding="async"></button><div class="caption"><div class="chapter">Chapter 01</div><h3>One of my favorite us moments</h3><p>Every time I see this I remember how easy it feels when we are together</p></div></article>
+    <article class="memory glass"><button class="media portrait" data-kind="video" data-src="v1.mp4"><img src="post1.jpg" alt="Our first video memory" loading="lazy" decoding="async"><span class="play"><span>▶</span></span></button><div class="caption"><div class="chapter">Chapter 02</div><h3>A little moment I keep replaying</h3><p>Some memories are too good to stay still</p></div></article>
+    <article class="memory glass"><button class="media landscape" data-kind="image" data-src="p2.jpg"><img src="p2.jpg" alt="Our second memory" loading="lazy" decoding="async"></button><div class="caption"><div class="chapter">Chapter 03</div><h3>You and me in one frame</h3><p>My favorite place keeps being wherever you are</p></div></article>
+    <article class="memory glass"><button class="media landscape" data-kind="video" data-src="v2.mp4"><img src="post2.jpg" alt="Our second video memory" loading="lazy" decoding="async"><span class="play"><span>▶</span></span></button><div class="caption"><div class="chapter">Chapter 04</div><h3>Proof the distance never won</h3><p>When I wish you were closer these are the moments that remind me what we have is bigger than the distance</p></div></article>
+    <article class="memory glass"><button class="media portrait" data-kind="image" data-src="p3.jpg"><img src="p3.jpg" alt="Our third memory" loading="lazy" decoding="async"></button><div class="caption"><div class="chapter">Chapter 05</div><h3>Two years later and I still choose you</h3><p>Every photo every call every goodbye every reunion all of it brought us here</p></div></article>
+  </div>
+</div></section>
+
+<section><div class="shell"><article class="letter glass"><div class="kicker">A letter for you</div><h2>Rozana my favorite person</h2><p>If I could give you one thing today I would give you the chance to see yourself through my eyes so you could understand how special you are to me</p><p>These two years were all the tiny things in between the late calls the waiting the missing you the laughing and choosing each other again the next day</p><p>Being long distance has never made this less real It taught me that closeness is knowing that somewhere in the world there is one person who has your heart and you have theirs</p><p>I do not know exactly what every chapter ahead will look like I only know I want you in it</p><p class="signature">Happy anniversary Rozana my love ♡</p></article></div></section>
+
+<section><div class="shell"><article class="gift glass"><div class="icon">🎁</div><div class="kicker">One more little surprise</div><h2>Not everything is for our anniversary</h2><p>A little bit of magic is waiting for September 9</p><button class="btn primary" id="giftButton" type="button">Check the gift ♡</button></article></div></section>
+<section class="ending"><div class="shell"><div class="kicker">30 08</div><h2>Two years down Rozana and I would choose you again</h2><p class="copy" style="margin-inline:auto">Across every mile through every call and into every chapter still you ♡</p></div></section>
+</main>
+
+<div class="modal" id="mediaModal"><button class="close" data-close type="button">×</button><img id="modalImage" alt="Our memory" style="display:none"><video id="modalVideo" controls playsinline preload="metadata" style="display:none"></video></div>
+<div class="modal" id="giftModal"><button class="close" data-close type="button">×</button><div class="modalcard"><div id="locked"><div style="font-size:42px">🎁</div><h3>Almost Rozana</h3><p>This part is waiting for September 9 so you still have one more little surprise coming</p><p>Come back on your birthday ♡</p></div><div id="ready" style="display:none"><div style="font-size:42px">🎂 ♡ ✨</div><h3>Happy Birthday Rozana my love</h3><p>I hope this year is gentle with you and generous to every dream you carry</p><p>You deserve peace laughter beautiful memories and everything your heart has been wishing for</p><p>I love you more than distance can measure ♡</p></div></div></div>
+<script>
+(()=>{'use strict';
+const START=Date.parse('2024-08-30T00:00:00+03:00');
+const d=document.getElementById('days'),h=document.getElementById('hours'),m=document.getElementById('minutes'),sec=document.getElementById('seconds');
+const pad=n=>String(n).padStart(2,'0');
+function tick(){const t=Math.max(0,Math.floor((Date.now()-START)/1000));d.textContent=Math.floor(t/86400);h.textContent=pad(Math.floor(t%86400/3600));m.textContent=pad(Math.floor(t%3600/60));sec.textContent=pad(t%60)}
+tick();setInterval(tick,1000);addEventListener('pageshow',tick);addEventListener('focus',tick);document.addEventListener('visibilitychange',()=>{if(!document.hidden)tick()});
+
+const audio=document.getElementById('ourSong'),songButton=document.getElementById('songButton'),songLine=document.getElementById('songLine'),songText=document.getElementById('songText');
+function songUI(){const playing=!audio.paused&&!audio.ended;songButton.textContent=playing?'Pause our song ♫':'Play our song ♫';songButton.classList.toggle('playing',playing);songLine.classList.toggle('playing',playing);songText.textContent=playing?'Adam Taa is playing':'Adam Taa'}
+songButton.addEventListener('click',async()=>{try{if(audio.paused){await audio.play()}else{audio.pause()}songUI()}catch(e){songText.textContent='Tap play again in Safari'}});audio.addEventListener('play',songUI);audio.addEventListener('pause',songUI);audio.addEventListener('ended',songUI);
+
+const mm=document.getElementById('mediaModal'),mi=document.getElementById('modalImage'),mv=document.getElementById('modalVideo');
+document.querySelectorAll('.media[data-src]').forEach(el=>el.addEventListener('click',()=>{const src=el.dataset.src,kind=el.dataset.kind;if(kind==='video'){mi.style.display='none';mi.removeAttribute('src');mv.style.display='block';mv.src=src;mm.classList.add('show');mv.play().catch(()=>{})}else{mv.pause();mv.removeAttribute('src');mv.load();mv.style.display='none';mi.style.display='block';mi.src=src;mm.classList.add('show')}}));
+
+const gm=document.getElementById('giftModal'),gb=document.getElementById('giftButton'),lo=document.getElementById('locked'),re=document.getElementById('ready');
+function gift(){const ok=Date.now()>=Date.parse('2026-09-09T00:00:00+03:00');lo.style.display=ok?'none':'block';re.style.display=ok?'block':'none'}
+gb.addEventListener('click',()=>{gift();gm.classList.add('show')});
+document.querySelectorAll('[data-close]').forEach(x=>x.addEventListener('click',()=>{mm.classList.remove('show');gm.classList.remove('show');mv.pause()}));
+[mm,gm].forEach(x=>x.addEventListener('click',e=>{if(e.target===x){x.classList.remove('show');mv.pause()}}));gift();
+})();
+</script>
+</body></html>
